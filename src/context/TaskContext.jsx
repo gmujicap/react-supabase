@@ -78,7 +78,7 @@ export const TaskContextProvider = ({ children }) => {
       const { error, data } = await supabase
         .from("tasks")
         .select("id, name, done")
-        .eq("userId", user.id)
+        // .eq("userId", user.id)
         .eq("done", done)
         .order("id", { ascending: false });
 
